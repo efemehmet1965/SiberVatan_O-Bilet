@@ -1,0 +1,188 @@
+/* --- SİBER VATAN BİLET - KIRMIZI TEMA STİL DOSYASI --- */
+
+/* 1. Genel ve Renk Paleti */
+:root {
+    --sv-primary: #252A34;   /* Antrasit/Füme */
+    --sv-secondary: #D9232D; /* Kırmızı */
+    --sv-blue: #007BFF;      /* Mavi (Linkler için) */
+    --sv-light: #f8f9fa;
+    --sv-dark: #212529;
+    --sv-success: #198754;
+    --sv-danger: #dc3545;
+    --sv-warning: #ffc107;
+    --sv-white: #ffffff;
+    --sv-body-bg: #f0f2f5;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--sv-body-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* 2. Navigasyon Barı */
+.navbar-dark.bg-primary-sv {
+    background-color: var(--sv-primary) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+/* 3. Butonlar ve Form Elemanları */
+.btn {
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--sv-secondary);
+    border-color: var(--sv-secondary);
+}
+
+.btn-primary:hover {
+    background-color: #b81c25; /* Kırmızının biraz koyusu */
+    border-color: #b81c25;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--sv-secondary);
+    box-shadow: 0 0 0 0.25rem rgba(217, 35, 45, 0.25); /* Kırmızı focus rengi */
+}
+
+/* 4. Ana Sayfa Arama Formu */
+.hero-section {
+    background-image: linear-gradient(45deg, rgba(37, 42, 52, 0.95), rgba(67, 74, 88, 0.85)), url('https://images.unsplash.com/photo-1570125909232-eb263c186922?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: var(--sv-white);
+    padding: 5rem 2rem;
+    margin-bottom: 60px;
+    border-radius: .75rem;
+}
+
+.search-form-container h3 {
+    color: var(--sv-primary);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* 5. Genel Kart Stili */
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--sv-light);
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+/* 6. Sefer Sonuçları Kartı */
+.trip-card .time-info {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--sv-primary);
+}
+
+.trip-card .price-info {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--sv-success);
+}
+
+/* 7. Koltuk Seçim Sayfası */
+.bus-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px; /* Otobüs genişliğini sınırlar */
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.corridor {
+    width: 20px; /* Koridor genişliği */
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--sv-secondary);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.seat:not(.booked):hover {
+    background-color: #f8d7da; /* Kırmızı hover */
+    transform: scale(1.1);
+}
+
+.seat.selected {
+    background-color: var(--sv-success);
+    border-color: var(--sv-success);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(25, 135, 84, 0.5);
+}
+
+.seat.booked {
+    background-color: var(--sv-primary);
+    border-color: var(--sv-primary);
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 8. Hesabım Sayfası */
+.ticket-card {
+    border-left: 5px solid var(--sv-primary);
+}
+
+.wallet-card {
+    background: linear-gradient(45deg, var(--sv-secondary), #a11a21);
+}
+
+/* 9. Footer */
+.footer {
+    background-color: var(--sv-primary);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 2rem 0;
+    margin-top: auto;
+}

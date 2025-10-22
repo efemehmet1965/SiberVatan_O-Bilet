@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - DOCKER_ENV=true
+    volumes:
+      - .:/var/www/html
+      - db_data:/var/www/html/database
+
+volumes:
+  db_data:

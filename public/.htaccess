@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+# Gelen isteğin bir dosya veya dizin olup olmadığını kontrol et
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Eğer değilse, tüm istekleri index.php'ye yönlendir
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
