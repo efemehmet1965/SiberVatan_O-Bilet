@@ -38,7 +38,7 @@ Bu projeyi yerel ortamınızda çalıştırmak için Docker kullanılması şidd
 1.  **Depoyu Klonlayın:**
     ```bash
     git clone [PROJE_DEPO_ADRESİ]
-    cd bilet-satin-alma
+    cd SiberVatan_O-Bilet
     ```
     *(Lütfen `[PROJE_DEPO_ADRESİ]` kısmını projenizin gerçek GitHub depo URL'si ile değiştirin.)*
 
