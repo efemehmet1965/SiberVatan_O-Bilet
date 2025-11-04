@@ -37,10 +37,9 @@ Bu projeyi yerel ortamınızda çalıştırmak için Docker kullanılması şidd
 
 1.  **Depoyu Klonlayın:**
     ```bash
-    git clone [PROJE_DEPO_ADRESİ]
+    git clone https://github.com/efemehmet1965/SiberVatan_O-Bilet
     cd SiberVatan_O-Bilet
     ```
-    *(Lütfen `[PROJE_DEPO_ADRESİ]` kısmını projenizin gerçek GitHub depo URL'si ile değiştirin.)*
 
 2.  **Docker Ortamını Başlatın:**
     Proje dizininin kökünden aşağıdaki komutu çalıştırın. Bu komut, gerekli Docker imajını oluşturacak, tüm bağımlılıkları kuracak, veritabanını başlatacak ve uygulamayı çalışır duruma getirecektir.
